@@ -18,7 +18,7 @@ class BaseModel(ABC):
         pass
 
 
-class LsaModel(BaseModel):
+class LdaModel(BaseModel):
     def __init__(self, nb_topics=10, data_cleanser=DataPreparation()):
         BaseModel.__init__(self, nb_topics, data_cleanser)
 
@@ -39,10 +39,10 @@ class LsaModel(BaseModel):
         return bow_corpus, dictionary
 
 
-class LsaModelWithTfIdf(LsaModel):
+class LdaModelWithTfIdf(LdaModel):
 
     def __init__(self, nb_topics=10):
-        LsaModel.__init__(self, nb_topics)
+        LdaModel.__init__(self, nb_topics)
 
     def train_predict(self):
         bow_corpus, dictionary = self._feature_preparations()

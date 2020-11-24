@@ -11,8 +11,8 @@ pip install -r requirements.txt
 
 In a Python3 environment:
 ```python
-from topics_finder.models import LsaModel
-lsa_obj = LsaModel()
-lsa_obj.train_predict()
+from topics_finder.models import LdaModel
+lda_obj = LdaModel()
+lda_obj.train_predict()
 ```
 
