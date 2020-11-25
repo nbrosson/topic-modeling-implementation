@@ -22,7 +22,7 @@ class BasePreparationClass(ABC):
         pass
 
 
-class DataPreparation:
+class DataPreparation(BasePreparationClass):
     """
     Default DataPreparation class that works with the tgz file in data/
     """

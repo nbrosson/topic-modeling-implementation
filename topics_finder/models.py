@@ -41,8 +41,8 @@ class LdaModel(BaseModel):
 
 class LdaModelWithTfIdf(LdaModel):
 
-    def __init__(self, nb_topics=10):
-        LdaModel.__init__(self, nb_topics)
+    def __init__(self, nb_topics=10, data_cleanser=DataPreparation()):
+        LdaModel.__init__(self, nb_topics, data_cleanser)
 
     def train_predict(self):
         bow_corpus, dictionary = self._feature_preparations()
